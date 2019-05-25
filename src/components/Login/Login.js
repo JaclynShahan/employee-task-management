@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './Messages.css';
+import './Login.css';
 
-class Messages extends Component {
+class Login extends Component {
   constructor () {
     super()
     this.state = {
@@ -22,4 +22,4 @@ class Messages extends Component {
   }
 }
 
-export default Messages;
+export default Login;
