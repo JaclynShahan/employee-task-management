@@ -1,0 +1,12 @@
+.test {
+    width: 100vw;
+    height: 100vh;
+    background: blue;
+    -webkit-transition: width 2s, height 4s -webkit-transform 2s;
+    transition: width 2s, height 4s, transform 2s;
+}
+
+.test:hover {
+    width: 300px;
+    height: 600px;
+}

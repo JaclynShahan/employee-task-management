@@ -14,9 +14,11 @@ class Home extends Component {
 
   
   return (
-    <div>
+      <div>
+    <body className="element">
     
-    </div>
+    </body>
+   </div> 
   );
   
   }

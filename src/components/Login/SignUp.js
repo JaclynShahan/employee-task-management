@@ -5,6 +5,7 @@ import Axios from 'axios'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
+
 class SignUp extends Component {
     constructor () {
         super()
@@ -13,9 +14,29 @@ class SignUp extends Component {
             lastName: '',
             createUsername: '',
             createPassword: '',
-            redirect: ''
+            redirect: '',
+            visible: false
         }
     }
+
+    addUser = e => {
+        e.preventDefault()
+        Axios.post('/api/addUser', {
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            createUsername: this.state.createUsername,
+            createPassword: this.state.createPassword
+        }).then(resp => {
+            this.onClear()
+            this.props.defineUser(resp.data)
+            this.openNotification()
+            console.log(resp)
+        })
+    }
+    userChange = (e, stateProperty) => {
+        this.setState({ [stateProperty]: e.target.value})
+    }
+
     onClear = () => {
         this.setState({
           firstName: '',
@@ -76,26 +97,59 @@ class SignUp extends Component {
       className="inputName"
       placeholder="First Name"
       value={this.state.firstName}
+      onChange={e => this.userChange(e, 'firstName')}
       />
       <input
       className="inputName"
       placeholder="Last Name"
       value={this.state.lastName}
+      onChange={e => this.userChange(e, 'lastName')}
       />
       <input
       className="inputName"
       placeholder="Create Username"
       value={this.state.createUsername}
+      onChange={e => this.userChange(e, 'createUsername')}
       />
       <input
       className="inputName"
       placeholder="Create Password"
       value={this.state.createPassword}
+      onChange={e => this.userChange(e, 'createPassword')}
       />
-      
+      <button
+      onClick={e => this.addUser(e)}
+      >
+          Submit
+      </button>
+      <button
+      onClick={() => this.props.onClose()}
+      >Cancel</button>
+      {this.state.redirect}
+
       </Drawer>
         )
     }
 }
 
-export default SignUp;
+const mapStateToProps = state => state
+const mapDispatchToProps = dispatch => ({
+    defineUser (user) {
+        dispatch({
+            type: 'GET_USER',
+            payload: user
+        })
+       
+    },
+    newUser (e) {
+        dispatch({
+            type: 'GET_USER',
+            payload: e.target.value
+        })
+    }
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SignUp)

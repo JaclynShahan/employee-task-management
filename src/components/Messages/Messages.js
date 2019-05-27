@@ -14,7 +14,7 @@ class Messages extends Component {
 
   
   return (
-    <div>
+    <div className="test">
     
     </div>
   );

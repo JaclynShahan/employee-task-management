@@ -3,11 +3,15 @@ import SignUp from './SignUp';
 import './Login.css';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import Axios from 'axios';
 
 class Login extends Component {
   constructor () {
     super()
     this.state = {
+        username: '',
+        password: '',
+        visible: false
 
     }
   }
@@ -21,6 +25,27 @@ class Login extends Component {
       visible: false
     })
   }
+  getUser = e => {
+      e.preventDefault()
+      Axios.get(
+          `/api/getUser?username=${this.state.username}&password=${this.state.password}`
+      )
+      .then(resp => {
+          this.props.defineUser(resp.data[0])
+      })
+      .then(resp => this.setState({ redirect: <Redirect to='/Home' />}))
+  }
+  changeUser = (e, stateProperty) => {
+    this.setState({ [stateProperty]: e.target.value
+        })
+  }
+
+  onClear = () => {
+      this.setState({
+          username: '',
+          password: ''
+      })
+  }
   render () {
 
   
@@ -32,18 +57,27 @@ class Login extends Component {
         <input
         className="inputName"
         placeholder="Username"
+        value={this.state.username}
+        onChange={e => this.changeUser(e, 'username')}
         />
         <input
         className="inputPass"
         placeholder="Password"
+        value={this.state.password}
+        onChange={e => this.changeUser(e, 'password')}
         />
-        <button className="loginButton">Login</button>
+        {this.props.setUser.user.username ? <Redirect to='/Home'/> : ''}
+        <button 
+        className="loginButton"
+        type="submit"
+        onClick={e => this.getUser(e)}
+        >Login</button>
         <h4 className="h4"> 
         Don't have an account? 
         <button 
         className="signUp" 
         onClick={this.showDrawer}>
-         {''} Sign-Up
+         {' '} Sign-Up
          </button>
         </h4>
         <SignUp visible={this.state.visible} onClose={this.onClose} />
