@@ -14,7 +14,7 @@
     top: 50%;
     left: 0;
     width: 40vw;
-    height: 60vh;
+    height: 65vh;
     margin-top: -200px;
     overflow: hidden;
     margin-left: 30%;
@@ -31,6 +31,8 @@
     letter-spacing: 0.11em;
     margin-top: 10px;
     margin-left: 20%;
+    background-color: rgba(218, 216, 216, 0.911);
+    border: 1px solid black;
   }
 
  .inputPass {
@@ -44,6 +46,8 @@
     letter-spacing: 0.11em;
     margin-top: 8%;
     margin-left: 20%;
+    background-color: rgba(218, 216, 216, 0.911);
+    border: 1px solid black;
   }
 
   .loginButton {
@@ -52,6 +56,8 @@
       margin-top: 40px;
       margin-left: 20%;
       font-size: 15px;
+      background-color: rgba(218, 216, 216, 0.911);
+      border: 1px solid black;
   }
 
   .header {
@@ -67,6 +73,8 @@
       height: 25px;
       font-size: 10px;
       margin-left: 15px;
+      background-color: rgba(218, 216, 216, 0.911);
+      border: 1px solid black;
   }
 
   .h4 {
@@ -75,4 +83,18 @@
       color: lightslategray;
       margin-left: 40%;
       margin-top: 5%;
+  }
+
+  .logintab {
+      width: 288px;
+      height: 40px;
+      background-color: rgba(218, 216, 216, 0.911);
+    
+  }
+.logintabborder {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+  .signuptab {
+      border-bottom:  #c3d0d8;
   }

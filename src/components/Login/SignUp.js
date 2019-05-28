@@ -85,14 +85,7 @@ class SignUp extends Component {
 
     render() {
         return(
-    <Drawer
-        title='Create an Account'
-        placement='bottom'
-        closable={false}
-        onClose={this.props.onClose}
-        visible={this.props.visible}
-      >
-
+        <div>
       <input
       className="inputName"
       placeholder="First Name"
@@ -127,7 +120,8 @@ class SignUp extends Component {
       >Cancel</button>
       {this.state.redirect}
 
-      </Drawer>
+   
+     </div>
         )
     }
 }
