@@ -14,8 +14,9 @@ class Tasks extends Component {
 
   
   return (
-    <div>
-    
+    <div className="headerForm">
+    <div className="profilePic"></div>
+    <button className="editButton">Edit Profile</button>
     </div>
   );
   

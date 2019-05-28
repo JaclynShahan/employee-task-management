@@ -1,7 +1,7 @@
 .test {
     width: 100vw;
     height: 100vh;
-    background: blue;
+    background: rgb(151, 151, 170);
     -webkit-transition: width 2s, height 4s -webkit-transform 2s;
     transition: width 2s, height 4s, transform 2s;
 }

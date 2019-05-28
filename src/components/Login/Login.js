@@ -53,7 +53,7 @@ class Login extends Component {
     <div className="wrapper">
         <button className="logintab logintabborder">LOGIN</button>
         <button className="logintab signuptab">SIGNUP</button>
-        <form className="loginForm">
+        <form>
             <h1 className="header">WELCOME</h1>
             <h4 className="h4">Login or Sign Up</h4>
         <input
@@ -83,7 +83,7 @@ class Login extends Component {
          {' '} Sign-Up
          </button>
         </h4>
-        <SignUp visible={this.state.visible} onClose={this.onClose} />
+        
         </form>
     
     </div>

@@ -15,6 +15,7 @@ class Profile extends Component {
   
   return (
     <div>
+        <header></header>
     
     </div>
   );

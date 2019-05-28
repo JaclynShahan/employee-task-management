@@ -1,0 +1,32 @@
+.headerForm {
+    position: relative;
+    font-size: 16px;
+    height: 22vh;
+    width: 100vw;
+    box-sizing: border-box;
+    border-color: rgb(82, 120, 177);
+    border: 2px solid;
+    background-image: linear-gradient(to right, darkgrey, gray, whitesmoke);
+    margin-top: 40px;
+  }
+
+  .profilePic {
+      position: fixed;
+      height: 250px;
+      width: 250px;
+      box-sizing: border-box;
+      border-radius: 100%;
+      background-color: whitesmoke;
+      border: 2px solid black;
+      margin-top: 50px;
+      margin-left: 39%;
+  }
+
+  .editButton {
+      position: fixed;
+      height: 30px;
+      width: 12vw;
+      border-radius: 10px;
+      margin-top: 13%;
+      margin-left: 39%;
+  }
