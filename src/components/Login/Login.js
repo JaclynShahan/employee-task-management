@@ -11,20 +11,11 @@ class Login extends Component {
     this.state = {
         username: '',
         password: '',
-        //visible: false
+       
 
     }
   }
- // showDrawer = () => {
-   // this.setState({
-     // visible: true
-    //})
-  //}
-  //onClose = () => {
-    //this.setState({
-      //visible: false
-    //})
-  //}
+ 
   getUser = e => {
       e.preventDefault()
       Axios.get(
@@ -78,7 +69,7 @@ class Login extends Component {
         Don't have an account? 
         <button 
         className="signUp" 
-        //onClick={this.showDrawer}
+      
         >
          {' '} Sign-Up
          </button>

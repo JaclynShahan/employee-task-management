@@ -1,0 +1,64 @@
+.headerForm {
+    position: absolute;
+    font-size: 16px;
+    height: 22vh;
+    width: 100vw;
+    box-sizing: border-box;
+    border-color: rgb(82, 120, 177);
+    border: 2px solid;
+    background-image: linear-gradient(to right, darkgrey, gray, whitesmoke);
+    margin-top: 40px;
+  }
+
+  .profilePic {
+      position: fixed;
+      height: 250px;
+      width: 250px;
+      box-sizing: border-box;
+      border-radius: 100%;
+      background-color: whitesmoke;
+      border: 2px solid black;
+      margin-top: 100px;
+      margin-left: 39%;
+  }
+
+  .editButton {
+      position: relative;
+      height: 25px;
+      width: 10vw;
+      border-radius: 10px;
+      margin-left: 50px;
+      margin-bottom: 10px;
+  }
+
+  .sider {
+      position: fixed;
+      height: 74vh;
+      width: 20vw;
+      box-sizing: border-box;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      background-image: linear-gradient(to left, darkgrey, gray, whitesmoke);
+      margin-top: 221px;
+      margin-left: 0px;
+  }
+  h2 {
+      margin-left: 15px;
+      font-size: 36px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  img {
+    height: 245px;
+    width:  245px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  .tasks {
+     align-content: center;
+     position: fixed;
+     margin-top: 26%;
+     margin-left: 24%;
+     font-style: italic;
+  }

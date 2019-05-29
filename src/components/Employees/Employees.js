@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Icon} from 'antd';
 import './Employees.css';
 
 class Employees extends Component {
@@ -14,7 +14,12 @@ class Employees extends Component {
 
   
   return (
-    <div>
+    <div className="boxAround">
+        <input 
+        className="searchBar"
+        placeholder="Search Employees..."
+        />
+        <button className="searchButton"><Icon style={{fontSize: '20px'}}type="search"/></button>
     
     </div>
   );
