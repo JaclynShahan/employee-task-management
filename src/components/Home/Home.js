@@ -15,10 +15,10 @@ class Home extends Component {
   
   return (
       <div>
-    <body className="element">
-    
-    </body>
-   </div> 
+       <div className="gridLayout">
+           <div className="monthName"> June 2019</div>
+       </div>
+    </div>
   );
   
   }
