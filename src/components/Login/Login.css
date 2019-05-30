@@ -6,7 +6,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    width: 40vw;
+    width: 40.20vw;
     height: 65vh;
     margin-top: -200px;
     overflow: hidden;
@@ -26,6 +26,24 @@
     margin-left: 20%;
     background-color: rgba(218, 216, 216, 0.911);
     border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
+  }
+  .inputNameSignup {
+    width: 60%;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid rgba(grey, 0.5);
+    font-size: 20px;
+    font-weight: 300;
+    color: #797A9E;
+    letter-spacing: 0.11em;
+    margin-top: 40px;
+    margin-left: 20%;
+    background-color: rgba(218, 216, 216, 0.911);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
   }
 
  .inputPass {
@@ -41,16 +59,19 @@
     margin-left: 20%;
     background-color: rgba(218, 216, 216, 0.911);
     border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
   }
 
   .loginButton {
-      width: 60%;
+      width: 63%;
       height: 40px;
       margin-top: 40px;
       margin-left: 20%;
       font-size: 15px;
       background-color: rgba(218, 216, 216, 0.911);
       border: 1px solid black;
+      border-radius: 20px
   }
 
   .header {
@@ -80,17 +101,37 @@
   }
 
   .logintab {
-      width: 288px;
+    position: fixed;
+      width: 242px;
       height: 40px;
-      background-color: rgba(218, 216, 216, 0.911);
+    background-color: #c3d0d8;
+    margin-top: -42px;
+    margin-left: -2px;
+   
     
   }
 .logintabborder {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
+border-top: 2px solid black;
+border-left: 2px solid black;
+border-right: 2px solid black;
 }
   .signuptab {
       border-bottom:  #c3d0d8;
-    
+      position: fixed;
+      width: 242px;
+      height: 40px;
+    background-color: #c3d0d8;
+    margin-left: 20%;
+    margin-top: -42px;
+  
   }
-
+.signupButtons {
+  width: 30%;
+  height: 40px;
+  margin-top: 40px;
+  margin-left: 15%;
+  font-size: 15px;
+  background-color: rgba(218, 216, 216, 0.911);
+  border: 1px solid black;
+  border-radius: 20px;
+}

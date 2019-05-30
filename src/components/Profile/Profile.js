@@ -30,6 +30,8 @@ class Profile extends Component {
     <h5>Hire Date: 5/5/19</h5>
     <h5>Status: Full-Time Hourly</h5>
     <h5>Rate: $15.50</h5>
+    <h5>Phone: 469-222-4898</h5>
+    <h5>Email: shahanjaclyn@gmail.com</h5>
     </div>
     <div>
     <h1 className="tasks">My Tasks:</h1> 

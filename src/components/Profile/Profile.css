@@ -12,8 +12,8 @@
 
   .profilePic {
       position: fixed;
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       box-sizing: border-box;
       border-radius: 100%;
       background-color: whitesmoke;
@@ -39,18 +39,18 @@
       border-right: 2px solid black;
       border-left: 2px solid black;
       background-image: linear-gradient(to left, darkgrey, gray, whitesmoke);
-      margin-top: 221px;
+      margin-top: 190px;
       margin-left: 0px;
   }
   h2 {
-      margin-left: 15px;
-      font-size: 36px;
+      margin-left: 10px;
+      font-size: 30px;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   img {
-    height: 245px;
-    width:  245px;
+    height: 195px;
+    width:  195px;
     border-radius: 100%;
     overflow: hidden;
   }

@@ -11,7 +11,6 @@ class Login extends Component {
     this.state = {
         username: '',
         password: '',
-       
 
     }
   }
@@ -41,9 +40,8 @@ class Login extends Component {
 
   
   return (
-    <div className="wrapper">
-        <button className="logintab logintabborder">LOGIN</button>
-        <button className="logintab signuptab">SIGNUP</button>
+    <div>
+      
         <form>
             <h1 className="header">WELCOME</h1>
             <h4 className="h4">Login or Sign Up</h4>
@@ -65,17 +63,9 @@ class Login extends Component {
         type="submit"
         onClick={e => this.getUser(e)}
         >Login</button>
-        <h4 className="h4"> 
-        Don't have an account? 
-        <button 
-        className="signUp" 
-      
-        >
-         {' '} Sign-Up
-         </button>
-        </h4>
+
         
-        </form>
+        </form> 
     
     </div>
   );

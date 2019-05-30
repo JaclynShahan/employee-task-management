@@ -12,11 +12,12 @@ import Profile from './components/Profile/Profile.js';
 import Reports from './components/Reports/Reports.js';
 import Tasks from './components/Tasks/Tasks.js';
 import Login from './components/Login/Login.js';
+import Toggle from './components/Login/Toggle.js';
 
 export default (
   <Provider store={store}>
     <Switch>
-      <Route exact path='/' component={Login} />
+      <Route exact path='/' component={Toggle} />
       <Route path='/home' component={Home} />
       <Route path='/profile' component={Profile} />
       <Route path='/employees' component={Employees} />

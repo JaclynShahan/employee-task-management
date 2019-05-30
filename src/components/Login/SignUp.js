@@ -87,35 +87,37 @@ class SignUp extends Component {
         return(
         <div>
       <input
-      className="inputName"
+      className="inputNameSignup"
       placeholder="First Name"
       value={this.state.firstName}
       onChange={e => this.userChange(e, 'firstName')}
       />
       <input
-      className="inputName"
+      className="inputNameSignup"
       placeholder="Last Name"
       value={this.state.lastName}
       onChange={e => this.userChange(e, 'lastName')}
       />
       <input
-      className="inputName"
+      className="inputNameSignup"
       placeholder="Create Username"
       value={this.state.createUsername}
       onChange={e => this.userChange(e, 'createUsername')}
       />
       <input
-      className="inputName"
+      className="inputNameSignup"
       placeholder="Create Password"
       value={this.state.createPassword}
       onChange={e => this.userChange(e, 'createPassword')}
       />
       <button
+      className="signupButtons"
       onClick={e => this.addUser(e)}
       >
           Submit
       </button>
       <button
+      className="signupButtons"
       onClick={() => this.props.onClose()}
       >Cancel</button>
       {this.state.redirect}
