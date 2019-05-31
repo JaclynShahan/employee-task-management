@@ -39,7 +39,7 @@
       border-right: 2px solid black;
       border-left: 2px solid black;
       background-image: linear-gradient(to left, darkgrey, gray, whitesmoke);
-      margin-top: 190px;
+      margin-top: 221px;
       margin-left: 0px;
   }
   h2 {
@@ -61,4 +61,30 @@
      margin-top: 26%;
      margin-left: 24%;
      font-style: italic;
+    
+  }
+
+  .tasks2 {
+      align-content: center;
+      position: fixed;
+      font-style: italic;
+      margin-top: 40%;
+      margin-left: 24%;
+    
+  }
+
+  .p2 {
+      position: absolute;
+      margin-top: 44%;
+      margin-left: 33%;
+      font-size: 24px;
+
+  }
+
+  .p1 {
+      position: absolute;
+      margin-top: 30%;
+      margin-left: 33%;
+      font-size: 24px;
+
   }

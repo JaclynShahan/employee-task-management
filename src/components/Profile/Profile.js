@@ -32,9 +32,13 @@ class Profile extends Component {
     <h5>Rate: $15.50</h5>
     <h5>Phone: 469-222-4898</h5>
     <h5>Email: shahanjaclyn@gmail.com</h5>
+    <h5>Username: shahanjaclyn</h5>
     </div>
     <div>
-    <h1 className="tasks">My Tasks:</h1> 
+    <h1 className="tasks">Tasks Completed:</h1> 
+    <p className="p1">38</p>
+    <h1 className="tasks2">Tasks Incomplete:</h1>
+    <p className="p2">56</p>
     </div>
     </div>
   );

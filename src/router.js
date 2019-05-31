@@ -7,9 +7,7 @@ import store from './store'
 import Employees from './components/Employees/Employees.js';
 import Home from './components/Home/Home.js';
 import Messages from './components/Messages/Messages.js';
-import Notes from './components/Notes/Notes.js';
 import Profile from './components/Profile/Profile.js';
-import Reports from './components/Reports/Reports.js';
 import Tasks from './components/Tasks/Tasks.js';
 import Login from './components/Login/Login.js';
 import Toggle from './components/Login/Toggle.js';
@@ -22,8 +20,6 @@ export default (
       <Route path='/profile' component={Profile} />
       <Route path='/employees' component={Employees} />
       <Route path='/tasks' component={Tasks} />
-      <Route path='/reports' component={Reports} />
-      <Route path='/notes' component={Notes} />
       <Route path='/messages' component={Messages} />
     </Switch>
   </Provider>

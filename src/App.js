@@ -23,8 +23,6 @@ class App extends Component {
           <Link to='/profile'>Profile</Link>
           <Link to='/employees'>Employees</Link>
           <Link to='/tasks'>Tasks</Link>
-          <Link to='/reports'>Reports</Link>
-          <Link to='/notes'>Notes</Link>
           <Link to='/messages'>Messages</Link>
 
      </div>  
