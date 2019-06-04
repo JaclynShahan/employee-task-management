@@ -102,11 +102,12 @@
 
   .logintab {
     position: fixed;
-      width: 242px;
+      width: 290px;
       height: 40px;
     background-color: #c3d0d8;
     margin-top: -42px;
     margin-left: -2px;
+    background-size: auto;
    
     
   }
@@ -118,11 +119,12 @@ border-right: 2px solid black;
   .signuptab {
       border-bottom:  #c3d0d8;
       position: fixed;
-      width: 242px;
+     width: 290px;
       height: 40px;
     background-color: #c3d0d8;
     margin-left: 20%;
     margin-top: -42px;
+    background-size: auto;
   
   }
 .signupButtons {

@@ -22,8 +22,9 @@ class Login extends Component {
       )
       .then(resp => {
           this.props.defineUser(resp.data[0])
+          console.log(resp)
       })
-      .then(resp => this.setState({ redirect: <Redirect to='/Home' />}))
+      
   }
   changeUser = (e, stateProperty) => {
     this.setState({ [stateProperty]: e.target.value
@@ -37,9 +38,11 @@ class Login extends Component {
       })
   }
   render () {
-
+    console.log(this.state)
+    console.log(this.props)
   
   return (
+
     <div>
       
         <form>
@@ -56,6 +59,7 @@ class Login extends Component {
         placeholder="Password"
         value={this.state.password}
         onChange={e => this.changeUser(e, 'password')}
+        type="password"
         />
         {this.props.setUser.user.username ? <Redirect to='/Home'/> : ''}
         <button 
