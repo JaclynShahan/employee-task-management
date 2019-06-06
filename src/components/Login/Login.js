@@ -21,8 +21,12 @@ class Login extends Component {
           `/api/getUser?username=${this.state.username}&password=${this.state.password}`
       )
       .then(resp => {
-          this.props.defineUser(resp.data[0])
-          console.log(resp)
+         if (this.props.defineUser(resp.data[0])) {
+            console.log(resp)
+         } else {
+             alert('Username or Password is incorrect. Please try again.')
+         }
+          
       })
       
   }
