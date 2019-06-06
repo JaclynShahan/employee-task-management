@@ -1,3 +1,15 @@
+@import "~antd/dist/antd.css";
+
+
+.calendarStyle {
+background-color: whitesmoke;
+width: 300px;
+position: absolute;
+border: 1px solid black;
+border-radius: 4;
+margin-left: 65%;
+margin-top: 20%;
+}
 .headerForm {
     position: absolute;
     font-size: 16px;
