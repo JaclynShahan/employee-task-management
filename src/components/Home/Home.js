@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Calendar } from 'antd';
 import './Home.css';
+import PieChart from './PieChart.js';
+import BarChart from './BarChart.js';
 
 class Home extends Component {
   constructor () {
@@ -16,11 +18,12 @@ class Home extends Component {
 
   
   return (
-      <div>
-       
-  
-      
-    </div>
+      <div >
+        <PieChart />
+        <BarChart />
+       </div>
+    
+    
   );
   
   }

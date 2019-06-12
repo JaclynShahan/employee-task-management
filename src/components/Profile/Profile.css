@@ -4,11 +4,11 @@
 .calendarStyle {
 background-color: whitesmoke;
 width: 300px;
-position: absolute;
+position: fixed;
 border: 1px solid black;
 border-radius: 4;
-margin-left: 65%;
-margin-top: 20%;
+margin-left: 78%;
+margin-top: 17%;
 }
 .headerForm {
     position: absolute;
@@ -99,4 +99,9 @@ margin-top: 20%;
       margin-left: 33%;
       font-size: 24px;
 
+  }
+
+  h5 {
+      font-size: 20px;
+      padding: 5px 5px;
   }

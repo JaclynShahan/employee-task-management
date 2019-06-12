@@ -21,7 +21,7 @@ class SignUp extends Component {
 
     addUser = e => {
         e.preventDefault()
-        Axios.post('/api/addUser', {
+        Axios.post('/api/createUser', {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             createUsername: this.state.createUsername,
@@ -84,6 +84,7 @@ class SignUp extends Component {
     
 
     render() {
+        console.log(this.state)
         return(
         <div>
       <input
@@ -106,10 +107,12 @@ class SignUp extends Component {
       />
       <input
       className="inputNameSignup"
+      type="password"
       placeholder="Create Password"
       value={this.state.createPassword}
       onChange={e => this.userChange(e, 'createPassword')}
       />
+      <br></br>
       <button
       className="signupButtons"
       onClick={e => this.addUser(e)}

@@ -1,0 +1,13 @@
+.chartContainer {
+ background-size: auto;
+ position: absolute;
+ margin-left: 46%;
+ margin-top: 8%;
+   
+}
+.graphContainer {
+    background-size: auto;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 8%;
+}
