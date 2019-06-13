@@ -1,0 +1,28 @@
+.tableStyle {
+table-layout: fixed;
+width: 90%;
+
+margin-top: 20px;
+position: fixed;
+margin-left: -15%;
+border: 2px inset rgb(34, 33, 33); 
+}
+
+.tableStyle td {
+   
+    text-overflow: ellipsis;
+    border: 2px dotted rgb(199, 197, 197);
+}
+
+.tableStyle th {
+text-align: left;
+padding: 5px 10px;
+background-color: rgb(209, 208, 208);
+color: white;
+border: 2px inset rgb(34, 33, 33);
+width: 40%;
+}
+
+.tableStyle tr:nth-child(even) {
+    background-color: lightslategray;
+}
