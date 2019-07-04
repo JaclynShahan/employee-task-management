@@ -14,16 +14,35 @@
 .messageNotify {
     font-size: 25px;
     position: fixed;
-    margin-left: 5%;
-    height: 87vh;
-    width: 90vw;
-    margin-top: 4%;
+    margin-left: 4%;
+    height: 80vh;
+    width: 50vw;
+    margin-top: 5%;
     background-color: rgb(221, 217, 217);
     padding-left: 5px;
+    border-radius: 10px;
+    border: 2px solid grey;
 }
 
 .badgePosition {
     position: fixed;
     margin-top: 30%;
 
+}
+.replyForm {
+  position: absolute;
+  margin-top: 46%;
+  margin-left: 7%;
+}
+.replyInput {
+    border-radius: 10px;
+    width: 500px;
+    height: 40px;
+    margin-right: 15px;
+    padding-left: 5px;
+  
+}
+
+.replyButton {
+    border-radius: 10px;
 }

@@ -16,7 +16,10 @@ class Messages extends Component {
   componentDidMount() {
     const {endpoint} = this.state;
     const socket = socketIOClient(endpoint);
-    socket.on('msgs', data => this.setState({messages: data}))
+    socket.on('msgs', data => {
+      console.log(data)
+      this.setState({messages: data})
+    })
   }
 
   render () {
@@ -24,14 +27,20 @@ const {messages} = this.state;
   
   return (
     <div>
-    
        <Badge count={messages.length} showZero>
       <a href="#" className="badgePosition" />
     </Badge>
       <form className="messageNotify">
       Messages:
-    {messages.map(item => <p key={item}>{item}</p>)}
+      {messages.map(item => <p key={item}>{item}</p>)}
       </form>
+      <form className="replyForm">
+      <input 
+    className="replyInput"
+    placeholder="Reply..."
+    /> 
+    <button className="replyButton">SEND</button>
+    </form>
     </div>
   );
   

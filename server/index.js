@@ -22,18 +22,16 @@ let messages = [];
 
 
 app.post('/api/newMessage', (req,res) => {
-    messages.push(req.query.message)
+    messages.push(req.body.messages)
     io.emit('msgs', messages)
+    res.status(200).send("Done")
+    console.log(req.body)
 })
 
 let interval;
 
 io.on("connection", socket => {
     console.log("New Client Connected");
-    if (interval) {
-        clearInterval(interval);
-    }
-    interval = setInterval(() => getMessage(socket), 3000);
     socket.on("disconnect", () => {
         console.log("Client Disconnected");
     })
@@ -65,5 +63,5 @@ app.get('/api/getUser', (req, res) => {
 const port = 3052
 massive(process.env.connectionString).then(db => {
     app.set('db', db)
-    app.listen(port, () => console.log(`Server listening on port ${port}`))
+    server.listen(port, () => console.log(`Server listening on port ${port}`))
 })
