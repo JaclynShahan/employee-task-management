@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const http = require('http');
 const axios = require('axios');
 const massive = require('massive');
 const socketIo = require('socket.io');
@@ -18,13 +19,6 @@ const io = socketIo(server);
 
 let messages = [];
 
-const getMessage = async socket => {
-    try {
-        socket.emit('/api/getMessage', res.data);
-    } catch (error) {
-        console.log(`Error: ${error.code}`);
-    }
-}
 
 
 app.post('/api/newMessage', (req,res) => {

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import router from './router';
 import { Link } from 'react-router-dom';
+import {Badge} from 'antd';
 
 class App extends Component {
   constructor () {
@@ -24,6 +25,7 @@ class App extends Component {
           <Link to='/employees'>Employees</Link>
           <Link to='/tasks'>Tasks</Link>
           <Link to='/messages'>Messages</Link>
+
 
      </div>  
      {router}   
