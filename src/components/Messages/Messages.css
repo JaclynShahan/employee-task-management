@@ -14,11 +14,11 @@
 .messageNotify {
     font-size: 25px;
     position: fixed;
-    margin-left: 4%;
+    margin-left: 8%;
     height: 80vh;
     width: 50vw;
     margin-top: 5%;
-    background-color: rgb(221, 217, 217);
+    background-color: #c3d0d8;
     padding-left: 5px;
     border-radius: 10px;
     border: 2px solid grey;
@@ -32,7 +32,7 @@
 .replyForm {
   position: absolute;
   margin-top: 46%;
-  margin-left: 7%;
+  margin-left: 10%;
 }
 .replyInput {
     border-radius: 10px;
@@ -45,4 +45,18 @@
 
 .replyButton {
     border-radius: 10px;
+}
+
+.listForm {
+    font-size: 25px;
+    position: fixed;
+    margin-left: 65%;
+    height: 80vh;
+    width: 25vw;
+    margin-top: 5%;
+    background-color: #c3d0d8;
+    padding-left: 5px;
+    border-radius: 10px;
+    border: 2px solid grey;
+    
 }

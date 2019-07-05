@@ -41,6 +41,10 @@ const {messages} = this.state;
     /> 
     <button className="replyButton">SEND</button>
     </form>
+    <form className="listForm">
+      Employees in Chat:
+
+    </form>
     </div>
   );
   
