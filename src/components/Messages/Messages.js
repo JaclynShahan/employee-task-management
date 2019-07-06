@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import socketIOClient from 'socket.io-client';
 import './Messages.css';
 import {Badge} from 'antd';
+import Axios from 'axios';
 
 class Messages extends Component {
   constructor () {
@@ -9,7 +10,9 @@ class Messages extends Component {
     this.state = {
       messages: [],
       endpoint: "http://localhost:3052",
-      response: false
+      response: false,
+      reply: '',
+      author: ''
     }
   }
 
@@ -21,6 +24,21 @@ class Messages extends Component {
       this.setState({messages: data})
     })
   }
+  changeUser = () => {
+socket.on('change_username', (data) => {
+  socket.username = data.username
+})
+  }
+sendMessage = e => {
+  e.preventDefault()
+  this.socket.emit('send_message', {
+    reply: this.state.reply,
+    author: this.state.author
+  })
+  this.setState({messages: ''})
+}
+
+
 
   render () {
 const {messages} = this.state;
