@@ -1,5 +1,13 @@
 const initialState = {
-    user: {},
+    user: { // static user data
+        create_date: null, // just remember to delete all of this later
+        email: "chrisfoster@yahoo.com",
+        first_name: "Chris",
+        last_name: "Foster",
+        password: "christopher",
+        user_id: 4,
+        username: "Cfoster"
+    },
     searchUser: []
 }
 
