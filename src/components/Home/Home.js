@@ -3,6 +3,8 @@ import { Calendar } from 'antd';
 import './Home.css';
 import PieChart from './PieChart.js';
 import BarChart from './BarChart.js';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class Home extends Component {
   constructor () {
@@ -21,6 +23,12 @@ class Home extends Component {
       <div >
         <PieChart />
         <BarChart />
+      
+        <button 
+        className="logoutButton"
+        onClick={() => this.props.defineUser({})}
+        >Logout</button>
+
        </div>
     
     
@@ -28,5 +36,19 @@ class Home extends Component {
   
   }
 }
+const mapStateToProps = state => state
 
-export default Home;
+const mapDispatchToProps = dispatch => ({
+    defineUser(user) {
+        dispatch({
+            type: 'GET_USER',
+            payload: user
+        }) 
+    }
+
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Home)
