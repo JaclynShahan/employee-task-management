@@ -1,7 +1,7 @@
 .tableStyle {
 table-layout: fixed;
 width: 90%;
-
+border-radius: 10px;
 margin-top: 20px;
 position: fixed;
 margin-left: -15%;
@@ -19,7 +19,7 @@ text-align: left;
 padding: 5px 10px;
 background-color: rgb(209, 208, 208);
 color: white;
-border: 2px inset rgb(34, 33, 33);
+border: 2px solid rgb(34, 33, 33);
 width: 40%;
 }
 

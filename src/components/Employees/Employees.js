@@ -25,7 +25,7 @@ class Employees extends Component {
 
 onSearch = () => {
     if(this.state.searchString.length > 0) {
-        const filteredUser = this.props.setUser.user(user => {
+        const filteredUser = this.props.setUser.searchUser.filter(user => {
             if (
                 user.firstName
                 .toLowerCase()
@@ -65,7 +65,7 @@ onKey = e => {
         onChange={e => this.updateSearchString(e.target.value)}
             onKey={e => this.onKey(e)}
         />
-        <button className="searchButton"><Icon style={{fontSize: '20px'}}type="search"/></button>
+        <button className="searchButton" onClick={() => this.onSearch()}><Icon style={{fontSize: '20px'}}type="search"/></button>
     <Table 
     users={this.state.searchArr}
     />
