@@ -24,11 +24,19 @@ changeModal = () => {
         console.log(this.props.visible)
         return(
             
-            <div className="modal" style={{visibility: this.changeModal()}}>
+            <div style={{visibility: this.changeModal()}}>
             
-                <div className="modal-content" style={{visibility: this.changeModal()}} onClose={this.props.onClose}>
-                <button onClick={this.onOk}>OK</button>
-                <button onClick={this.props.onClose}>CLOSE</button>
+                <div className="modal" style={{visibility: this.changeModal()}} onClose={this.props.onClose}>
+                <div className="modal-content">
+                <button className="modalButton">Edit Photo</button>
+                <br></br>
+                <br></br>
+                <button className="modalButton">Edit Info</button>
+                <br></br>
+                <br></br>
+                <button className="iconButtons ok" onClick={this.onOk}>OK</button>
+                <button className="iconButtons" onClick={this.props.onClose}>CLOSE</button>
+                </div>
                 </div>
             </div>
             
