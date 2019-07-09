@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './Profile.css';
 import { Calendar } from 'antd';
-
+import Modal from './Modal.js';
 class Profile extends Component {
   constructor () {
     super()
     this.state = {
-
+      visible: false
     }
   }
 
@@ -14,6 +14,13 @@ class Profile extends Component {
     console.log(value, mode)
   }
 
+  showModal = () => {
+    this.setState({visible: !this.state.visible})
+  }
+
+  onClose = () => {
+    this.setState({visible: false})
+  }
   render () {
 
   
@@ -29,7 +36,10 @@ class Profile extends Component {
   </div>
     <div className="sider">
     <h2>Jaclyn Shahan</h2>
-    <button className="editButton">Edit Profile</button>
+   
+    
+ <Modal visible={this.state.visible} onClose={this.onClose}/>
+ <button onClick={this.showModal} className="editButton">Edit Profile</button>
     <h5>Position: Full-Stack Developer</h5>
     <h5>Company: Blarg</h5>
     <h5>Location: 123 Street</h5>
