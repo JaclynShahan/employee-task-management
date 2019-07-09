@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Profile.css';
-import { timeout } from 'q';
+import { Icon } from 'antd';
 
 
 class Modal extends Component {
@@ -27,6 +27,7 @@ changeModal = () => {
             <div style={{visibility: this.changeModal()}}>
             
                 <div className="modal" style={{visibility: this.changeModal()}} onClose={this.props.onClose}>
+                <Icon onClick={this.props.onClose} className="exitButton" type="close"/>
                 <div className="modal-content">
                 <button className="modalButton">Edit Photo</button>
                 <br></br>

@@ -40,15 +40,24 @@ class Profile extends Component {
     
  <Modal visible={this.state.visible} onClose={this.onClose}/>
  <button onClick={this.showModal} className="editButton">Edit Profile</button>
-    <h5>Position: Full-Stack Developer</h5>
-    <h5>Company: Blarg</h5>
-    <h5>Location: 123 Street</h5>
-    <h5>Hire Date: 5/5/19</h5>
-    <h5>Status: Full-Time Hourly</h5>
-    <h5>Rate: $15.50</h5>
-    <h5>Phone: 469-222-4898</h5>
-    <h5>Email: shahanjaclyn@gmail.com</h5>
-    <h5>Username: shahanjaclyn</h5>
+    <h5>Position: </h5>
+      <span>Full-Stack Developer</span>
+    <h5>Company: </h5>
+    <span>Blarg</span>
+    <h5>Location: </h5>
+    <span>123 Street</span>
+    <h5>Hire Date: </h5>
+    <span>5/5/19</span>
+    <h5>Status: </h5>
+    <span>Full-Time Hourly</span>
+    <h5>Rate: </h5>
+    <span>$15.50</span>
+    <h5>Phone: </h5>
+    <span>469-222-4898</span>
+    <h5>Email: </h5>
+    <span>shahanjaclyn@gmail.com</span>
+    <h5>Username: </h5>
+    <span>shahanjaclyn</span>
     </div>
  
     <div>
