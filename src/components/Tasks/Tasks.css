@@ -1,0 +1,24 @@
+.taskbarNav {
+    background:  rgb(151, 151, 170);
+    overflow: hidden;
+    float: left;
+}
+
+.taskbarNav {
+    float: left;
+    display: block;
+    color: gray;
+    text-align: center;
+    text-decoration: cadetblue;
+    font-size: 20px;
+}
+
+.taskbarNav a:hover {
+    background-color: rgb(112, 140, 252);
+    color: rgb(252, 240, 240);
+}
+
+.taskbarNav:active {
+    background-color: rgb(112, 140, 252);
+    color: rgb(252, 240, 240);
+}
