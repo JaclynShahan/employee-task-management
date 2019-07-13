@@ -10,7 +10,8 @@ const initialState = {
        expiry_date: "5/16/2019",
        is_reminder: 1,
        next_remind_date: "3/16/2019",
-       reminder_frequency_id: 2
+       reminder_frequency_id: 2,
+       user_id: 5
     },
     searchTask: []
 }

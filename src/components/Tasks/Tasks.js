@@ -8,16 +8,31 @@ import Today from './children/Today.js';
 import Complete from './children/Complete.js';
 import Overdue from './children/Overdue.js';
 import TaskHistory from './children/TaskHistory.js';
+import Axios from 'axios';
 
 
 class Tasks extends Component {
   constructor () {
     super()
     this.state = {
-
+      subject: '',
+      text: '',
+      expiry_date: ''
     }
   }
-
+makeTask = e => {
+  e.preventDefault()
+Axios.post('/api/createTask', {
+  subject: this.state.subject,
+  text: this.state.text,
+  expiry_date: this.state.expiry_date,
+  comments: [],
+  createTask: this.props.setTask.tasks.createTask
+}).then(resp => {
+  this.props.defineTask(resp.data)
+  console.log(resp)
+})
+}
   render () {
 
   
