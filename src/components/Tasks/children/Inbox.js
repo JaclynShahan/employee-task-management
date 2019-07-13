@@ -5,8 +5,16 @@ class Inbox extends Component {
     constructor() {
         super()
         this.state = {
+            tasks: []
 
         }
+    }
+    componentDidMount () {
+
+    }
+
+    updateTask () {
+        
     }
 
     render() {
