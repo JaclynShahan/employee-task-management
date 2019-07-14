@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './Tasks.css';
+import { Icon } from 'antd';
 
 
-class createNew extends Component {
+class CreateNew extends Component {
     constructor() {
         super()
         this.state = {
@@ -23,18 +24,21 @@ class createNew extends Component {
     render() {
         return(
             <div style={{visibility: this.createModal()}}>
-            <div>
+            <div className="createModal">
+                <Icon onClick={this.props.onClose} className= "exitIcon" type="close"/>
                 <input 
+                className="createInputs"
                 placeholder="Subject"
                 />
                <input
+               className="createInputs"
                placeholder="Send To"
                />
-               <form>
+               <form className="createForm">
 
                </form>
-               <button onClick={this.onOkay}>OK</button>
-               <button onClose={this.props.onClose}>CLOSE</button>
+               <button className="createButtons createOk" onClick={this.onOkay}>OK</button>
+               <button className="createButtons" onClose={this.props.onClose}>CLOSE</button>
 
             </div>
 
@@ -43,4 +47,4 @@ class createNew extends Component {
     }
 }
 
-export default createNew;
+export default CreateNew;

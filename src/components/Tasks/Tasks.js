@@ -9,7 +9,7 @@ import Complete from './children/Complete.js';
 import Overdue from './children/Overdue.js';
 import TaskHistory from './children/TaskHistory.js';
 import Axios from 'axios';
-import createNew from './createNew.js';
+import CreateNew from './CreateNew.js';
 
 
 class Tasks extends Component {
@@ -65,8 +65,8 @@ showCreateTask = () => {
       <Route path='/tasks/children/overdue' component={Overdue}/>
       <Route path='/tasks/children/taskhistory' component={TaskHistory}/>
     </Switch>
-    <createNew visible={this.state.visible} onClose={this.onClose}/>
-    <h4 className="createIcon">New Task: <br></br><Icon style={{fontSize: '30px'}}className="create" type="file-add" /></h4>
+    <CreateNew visible={this.state.visible} onClose={this.onClose}/>
+    <h4 className="createIcon">New Task: <br></br><Icon onClick={this.showCreateTask} style={{fontSize: '30px'}}className="create" type="file-add" /></h4>
         
  
    </div>
