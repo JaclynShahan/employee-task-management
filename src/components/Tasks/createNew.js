@@ -10,9 +10,33 @@ class createNew extends Component {
         }
     }
 
+    onOkay = () => {
+        this.setState({visible: false})
+    }
+
+   createModal = () => {
+       if (this.props.visible == true) {
+           return "visible"
+       } return "hidden"
+   } 
+
     render() {
         return(
+            <div style={{visibility: this.createModal()}}>
             <div>
+                <input 
+                placeholder="Subject"
+                />
+               <input
+               placeholder="Send To"
+               />
+               <form>
+
+               </form>
+               <button onClick={this.onOkay}>OK</button>
+               <button onClose={this.props.onClose}>CLOSE</button>
+
+            </div>
 
             </div>
         )

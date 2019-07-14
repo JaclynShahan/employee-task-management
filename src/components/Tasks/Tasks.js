@@ -9,6 +9,7 @@ import Complete from './children/Complete.js';
 import Overdue from './children/Overdue.js';
 import TaskHistory from './children/TaskHistory.js';
 import Axios from 'axios';
+import createNew from './createNew.js';
 
 
 class Tasks extends Component {
@@ -17,7 +18,8 @@ class Tasks extends Component {
     this.state = {
       subject: '',
       text: '',
-      expiry_date: ''
+      expiry_date: '',
+      visible: false
     }
   }
 makeTask = e => {
@@ -32,6 +34,14 @@ Axios.post('/api/createTask', {
   this.props.defineTask(resp.data)
   console.log(resp)
 })
+}
+
+onClose = () => {
+  this.setState({visible: false})
+}
+
+showCreateTask = () => {
+  this.setState({visible: !this.state.visible})
 }
   render () {
 
@@ -55,6 +65,7 @@ Axios.post('/api/createTask', {
       <Route path='/tasks/children/overdue' component={Overdue}/>
       <Route path='/tasks/children/taskhistory' component={TaskHistory}/>
     </Switch>
+    <createNew visible={this.state.visible} onClose={this.onClose}/>
     <h4 className="createIcon">New Task: <br></br><Icon style={{fontSize: '30px'}}className="create" type="file-add" /></h4>
         
  
