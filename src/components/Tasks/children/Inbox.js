@@ -16,6 +16,11 @@ class Inbox extends Component {
          this.props.defineTasks(results.data)
      })
     }
+    updateInbox (id, text, subject, date) {
+        Axios.put(`/api/updateInbox/${id}`, {text, subject, date}).then(results => {
+            this.props.defineTasks(results.data)
+        })
+    }
 
 
     render() {
