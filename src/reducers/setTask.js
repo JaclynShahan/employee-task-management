@@ -11,7 +11,8 @@ const initialState = {
        is_reminder: 1,
        next_remind_date: "3/16/2019",
        reminder_frequency_id: 2,
-       user_id: 5
+       user_id: 5,
+       tasks_subject: "New Task "
     },
     searchTask: []
 }

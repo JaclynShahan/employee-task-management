@@ -34,8 +34,10 @@ class CreateNew extends Component {
                className="createInputs"
                placeholder="Send To"
                />
-               <form className="createForm">
-
+               <form 
+               placeholder="New Task Message..."
+               className="createForm">
+                
                </form>
                <button className="createButtons createOk" onClick={this.onOkay}>OK</button>
                <button className="createButtons" onClose={this.props.onClose}>CLOSE</button>
