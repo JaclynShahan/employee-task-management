@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import '../Tasks.css';
 import { connect } from 'react-redux';
 import Axios from 'axios';
+import CreateNew from './CreateNew.js';
+import {Icon} from 'antd';
 
 class Inbox extends Component {
     constructor() {
         super()
         this.state = {
-            tasks: []
+            tasks: [],
+            visible: false
 
         }
     }
@@ -21,12 +24,21 @@ class Inbox extends Component {
             this.props.defineTasks(results.data)
         })
     }
-
+    onClose = () => {
+        this.setState({visible: false})
+      }
+      
+      showCreateTask = () => {
+        this.setState({visible: !this.state.visible})
+      }
 
     render() {
         return(
             <div>
-
+ 
+    <h4 className="createIcon">New Task: </h4>
+    <Icon onClick={this.showCreateTask} style={{fontSize: '30px'}}className="create" type="file-add" />
+    <CreateNew visible={this.state.visible} onClose={this.onClose}/>
             </div>
         )
     }

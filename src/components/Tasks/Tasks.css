@@ -47,17 +47,19 @@ color: rgb(252, 240, 240);
     position: fixed;
     background-color: rgb(151, 151, 170);
     margin-left: 15%;
-    margin-top: 15px;
+   margin-top: -25%;
 }
 
 .createInputs {
     border-radius: 15px;
-    height: 40px;
-    width: 45%;
+    height: 30px;
+    width: 35%;
     margin-top: 20px;
-    margin-left: 32px;
-    margin-right: 5px;
-
+   
+}
+.createInputs1 {
+    margin-left: 250px;
+    margin-right: 10px;
 }
 
 .exitIcon {
@@ -84,7 +86,20 @@ color: rgb(252, 240, 240);
     height: 70%;
     width: 80%;
     background-color: whitesmoke;
-    margin-left: 120px;
+    margin-left: 200px;
     margin-top: 30px;
     border-radius: 20px
+}
+
+.spanTitle {
+    color: whitesmoke;
+    margin: 0;
+    font-size: 12px;
+}
+
+.spanForm {
+    height: 20%;
+    width: 50%;
+    position: fixed;
+    float: center;
 }

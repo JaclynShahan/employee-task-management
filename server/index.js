@@ -18,22 +18,6 @@ const io = socketIo(server);
 app.use(index(io));
 
 
-// app.get('/api/getMessage', (req,res) => {
-    //     const dbInstance = req.app.get('db')
-    //     dbInstance.getMessage(req.query.messages)
-    //    io.emit('msgs', messages)
-    //    res.status(200).send("Done")
-    //    console.log(req.query)
-    // })
-    
-    
-    
-    // app.post('/api/newMessage', (req,res) => {
-        //     messages.push(req.body.messages)
-        //     io.emit('msgs', messages)
-        //     res.status(200).send("Done")
-        //     console.log(req.body)
-        // })
         
     let messages = [];
         
