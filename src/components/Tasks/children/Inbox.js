@@ -35,9 +35,18 @@ class Inbox extends Component {
     render() {
         return(
             <div>
- 
+            <div className="task_data"> 
+            <div className="user_profile_pic">
+            <span>{this.props.user_id}</span>
+            </div>
+            <span>{this.props.tasks_subject}</span>
+            </div>
+            <div className="task_content">
+            <span className="task_text">{this.props.tasks_body}</span>
+            </div>
+
     <h4 className="createIcon">New Task: </h4>
-    <Icon onClick={this.showCreateTask} style={{fontSize: '30px'}}className="create" type="file-add" />
+    <Icon onClick={this.showCreateTask}  style={{fontSize: '30px'}}className="create"type="file-add" />
     <CreateNew visible={this.state.visible} onClose={this.onClose}/>
             </div>
         )

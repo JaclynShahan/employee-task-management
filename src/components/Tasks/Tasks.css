@@ -4,7 +4,7 @@
     background:  rgb(151, 151, 170);
     overflow: hidden;
     position: fixed; 
-    z-index: 90000;
+   z-index: 9000;
     width: 10%;
     height: 100%;
     margin-top: 2.75%;
@@ -14,7 +14,7 @@
 .taskbarNav a:hover {
     background-color: rgb(64, 82, 155);
     color: rgb(252, 240, 240);
-    width: 100%;
+   
 }
 
 .taskbarNav:active {
@@ -38,23 +38,23 @@ color: rgb(252, 240, 240);
 .create a:hover {
     background-color: rgb(64, 82, 155);
     color: rgb(252, 240, 240);
-    width: 100%;
+    
 }
 
 .createModal {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     position: fixed;
     background-color: rgb(151, 151, 170);
-    margin-left: 15%;
-   margin-top: -25%;
+    margin-left: 10%;
+   margin-top: -35%;
 }
 
 .createInputs {
     border-radius: 15px;
     height: 30px;
     width: 35%;
-    margin-top: 20px;
+   
    
 }
 .createInputs1 {
@@ -69,8 +69,8 @@ color: rgb(252, 240, 240);
 
 .createButtons {
     border-radius: 20px;
-    margin-top: 5%;
-  width: 90px;
+   
+ 
     
 }
 .createOk {
@@ -87,7 +87,7 @@ color: rgb(252, 240, 240);
     width: 80%;
     background-color: whitesmoke;
     margin-left: 200px;
-    margin-top: 30px;
+ 
     border-radius: 20px
 }
 
@@ -101,5 +101,5 @@ color: rgb(252, 240, 240);
     height: 20%;
     width: 50%;
     position: fixed;
-    float: center;
+   
 }

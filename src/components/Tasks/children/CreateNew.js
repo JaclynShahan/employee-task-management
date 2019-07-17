@@ -59,8 +59,10 @@ class CreateNew extends Component {
             <div style={{visibility: this.createModal()}}>
             <div className="createModal">
                 <Icon onClick={this.props.onClose} className= "exitIcon" type="close"/>
-               <form className="spanForm">
-                <h5 className="spanTitle">Author:</h5>
+               
+              
+               
+                {/* <h5 className="spanTitle">Author:</h5>
                 <span
                 value={this.state.creator_id}
                 onChange={e => this.onChangeTask(e)}
@@ -84,8 +86,8 @@ class CreateNew extends Component {
                 <span
                 value={this.state.next_remind_date}
                 onChange={e => this.onChangeTask(e)}
-                ></span>
-                </form>
+                ></span> */}
+                
                 <input 
                 className="createInputs createInputs1"
                 placeholder="Subject"
@@ -98,16 +100,16 @@ class CreateNew extends Component {
                value={this.state.user_id}
                onChange={e => this.onChangeTask(e)}
                />
-               <form 
+               <form
                value={this.state.tasks_body}
-               onChange={e => this.onChangeTask(e)}
-               placeholder="New Task Message..."
-               className="createForm">
-        
-               </form>
+                onChange={e => this.onChangeTask(e)}
+                placeholder="New Task Message..."
+                className="createForm">
+                
+                </form>
                <button className="createButtons createOk" onClick={this.onOkay}>OK</button>
                <button className="createButtons" onClose={this.props.onClose}>CLOSE</button>
-
+            
             </div>
 
             </div>
