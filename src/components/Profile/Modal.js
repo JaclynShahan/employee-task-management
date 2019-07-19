@@ -14,7 +14,7 @@ class Modal extends Component {
         this.setState({visible: false})
     }
 changeModal = () => {
-    if (this.props.visible == true) {
+    if (this.props.visible === true) {
         return "visible"
     } return "hidden"
 }

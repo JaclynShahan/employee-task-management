@@ -20,6 +20,7 @@ app.use(index(io));
 
         
     let messages = [];
+    let tasks = [];
         
 io.on("connection", socket => { // each socket that "connects", 
         //is a unique connection from a individual's web browser
@@ -30,16 +31,17 @@ io.on("connection", socket => { // each socket that "connects",
         // you then do something with the data
         // in here, you can also emit after the "something" has been done with data
     // })
-
+    socket.emit('tsks', tasks)
     socket.on('send_message', incomingMessage => {
         // console.log('incumming msg: ', incomingMessage)
         messages.push(incomingMessage);
         socket.emit('msgs', messages)
 
     })
-
-
-
+socket.on('send_tasks', incomingTask => {
+    tasks.push(incomingTask);
+    socket.emit('tsks', tasks)
+})
 
     socket.on("disconnect", () => { // disconnect = user closes browser or loses web connection
         console.log("Client Disconnected");
@@ -51,6 +53,17 @@ io.on("connection", socket => { // each socket that "connects",
 app.post('/api/createUser', (req, res) => {
     const dbInstance = req.app.get('db')
     dbInstance.createUser(req.body.first_name, req.body.last_name, req.body.username, req.body.password).then((resp) => {
+        console.log(resp)
+        res.status(200).send(resp)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
+
+app.post('/api/createTask', (req, res) => {
+    const dbInstance = req.app.get('db')
+    dbInstance.createTasks(req.body.tasksSubject, req.body.userId, req.body.tasksBody).then((resp) => {
         console.log(resp)
         res.status(200).send(resp)
     })

@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
 import '../Tasks.css';
-import { Icon } from 'antd';
+import { Icon, Input } from 'antd';
 import Axios from 'axios';
+import {connect} from 'react-redux';
 
 
 class CreateNew extends Component {
     constructor() {
         super()
         this.state = {
-           tasks_body: '',
-           creator_id: '',
-           create_date: '',
-           parent_task_id: '',
-           expiry_date: '',
-           is_reminder: '',
-           next_remind_date: '',
-           reminder_frequency_id: '',
-           user_id: '',
-           tasks_subject: ''
+           tasksBody: '',
+          // creatorId: '',
+           //createDate: '',
+           //parentTaskId: '',
+           //expiryDate: '',
+           //isReminder: '',
+           //nextRemindDate: '',
+           //reminderFrequencyId: '',
+           userId: '',
+           tasksSubject: ''
         }
     }
     makeTask = e => {
         e.preventDefault()
       Axios.post('/api/createTask', {
-      tasks_body: this.state.tasks_body,
-      creator_id: this.state.creator_id,
-      create_date: this.state.create_date,
-      parent_task_id: this.state.parent_task_id,
-      expiry_date: this.state.expiry_date,
-      is_reminder: this.state.is_reminder,
-      next_remind_date: this.state.next_remind_date,
-      reminder_frequency_id: this.state.reminder_frequency_id,
-      user_id: this.state.user_id,
-      tasks_subject: this.state.tasks_subject,
-        comments: [],
-        createTask: this.props.setTask.tasks.createTask
+      tasksBody: this.state.tasksBody,
+     // creatorId: this.state.creatorId,
+      //createDate: this.state.createDate,
+      //parentTaskId: this.state.parentTaskId,
+      //expiryDate: this.state.expiryDate,
+      //isReminder: this.state.isReminder,
+      //nextRemindDate: this.state.nextRemindDate,
+      //reminderFrequencyId: this.state.reminderFrequencyId,
+      userId: this.state.userId,
+      tasksSubject: this.state.tasksSubject,
+        //comments: [],
+       
       }).then(resp => {
         this.props.defineTask(resp.data)
         console.log(resp)
@@ -49,15 +50,18 @@ class CreateNew extends Component {
     }
 
    createModal = () => {
-       if (this.props.visible == true) {
+       if (this.props.visible === true) {
            return "visible"
        } return "hidden"
    } 
+   
 
     render() {
+        const { TextArea } = Input
+        const { tasksBody, tasksSubject, userId } = this.state
         return(
             <div style={{visibility: this.createModal()}}>
-            <div className="createModal">
+            <form className="createModal">
                 <Icon onClick={this.props.onClose} className= "exitIcon" type="close"/>
                
               
@@ -91,30 +95,43 @@ class CreateNew extends Component {
                 <input 
                 className="createInputs createInputs1"
                 placeholder="Subject"
-                value={this.state.tasks_subject}
-                onChange={e => this.onChangeTask(e)}
+                value={tasksSubject}
+                onChange={e => this.setState({tasksSubject: e.target.value})}
                 />
                <input
                className="createInputs"
                placeholder="Send To"
-               value={this.state.user_id}
-               onChange={e => this.onChangeTask(e)}
+               value={userId}
+               onChange={e => this.setState({userId: e.target.value})}
                />
-               <form
-               value={this.state.tasks_body}
-                onChange={e => this.onChangeTask(e)}
+               <TextArea
+               rows={8}
+               value={tasksBody}
+                onChange={e => this.setState({tasksBody: e.target.value})}
                 placeholder="New Task Message..."
-                className="createForm">
-                
-                </form>
-               <button className="createButtons createOk" onClick={this.onOkay}>OK</button>
-               <button className="createButtons" onClose={this.props.onClose}>CLOSE</button>
+                className="createForm"
+                />
+               <button className="createButtons createOk" onClick={e => this.makeTask(e)}>OK</button>
+               <button className="createButtons" onClose={this.onOkay}>CLOSE</button>
             
-            </div>
+            </form>
 
             </div>
         )
     }
 }
 
-export default CreateNew;
+const mapStateToProps = state => state
+const mapDispatchToProps = dispatch => ({
+    defineTask(tasks) {
+        dispatch({
+            type: 'GET_TASKS',
+            payload: tasks
+        })
+    }
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(CreateNew)

@@ -3,7 +3,8 @@ import '../Tasks.css';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 import CreateNew from './CreateNew.js';
-import {Icon} from 'antd';
+import {Icon, Badge} from 'antd';
+import {socket} from '../../../socket.js'
 
 class Inbox extends Component {
     constructor() {
@@ -14,11 +15,13 @@ class Inbox extends Component {
 
         }
     }
-    componentDidMount () {
-     Axios.get('/api/getTasks').then(results => {
-         this.props.defineTasks(results.data)
-     })
-    }
+    componentDidMount() {
+        socket.on('tsks', data => {
+          console.log(data)
+          this.setState({tasks: data})
+        })
+    
+      }
     updateInbox (id, text, subject, date) {
         Axios.put(`/api/updateInbox/${id}`, {text, subject, date}).then(results => {
             this.props.defineTasks(results.data)
@@ -32,17 +35,24 @@ class Inbox extends Component {
         this.setState({visible: !this.state.visible})
       }
 
+   
+
     render() {
+        
         return(
             <div>
+             <Badge count={this.state.tasks.length} showZero>
+      <a href="#" />
+    </Badge>
+
             <div className="task_data"> 
             <div className="user_profile_pic">
-            <span>{this.props.user_id}</span>
+            <span></span>
             </div>
-            <span>{this.props.tasks_subject}</span>
+            <span></span>
             </div>
             <div className="task_content">
-            <span className="task_text">{this.props.tasks_body}</span>
+            <span className="task_text"></span>
             </div>
 
     <h4 className="createIcon">New Task: </h4>
