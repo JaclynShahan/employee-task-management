@@ -54,7 +54,7 @@ class CreateNew extends Component {
            return "visible"
        } return "hidden"
    } 
-   
+
 
     render() {
         const { TextArea } = Input
@@ -92,13 +92,13 @@ class CreateNew extends Component {
                 onChange={e => this.onChangeTask(e)}
                 ></span> */}
                 
-                <input 
+                <Input 
                 className="createInputs createInputs1"
                 placeholder="Subject"
                 value={tasksSubject}
                 onChange={e => this.setState({tasksSubject: e.target.value})}
                 />
-               <input
+               <Input
                className="createInputs"
                placeholder="Send To"
                value={userId}

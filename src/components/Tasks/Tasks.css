@@ -42,11 +42,11 @@ color: rgb(252, 240, 240);
 }
 
 .createModal {
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 45%;
     position: fixed;
     background-color: rgb(151, 151, 170);
-    margin-left: 10%;
+    margin-left: 20%;
    margin-top: -35%;
 }
 
@@ -54,12 +54,12 @@ color: rgb(252, 240, 240);
     border-radius: 15px;
     height: 30px;
     width: 35%;
-   
+   margin-top: 30px;
    
 }
 .createInputs1 {
-    margin-left: 250px;
-    margin-right: 10px;
+    margin-left: 140px;
+    margin-right: 15px;
 }
 
 .exitIcon {
@@ -69,13 +69,13 @@ color: rgb(252, 240, 240);
 
 .createButtons {
     border-radius: 20px;
-   
+   margin-top: 30px;
  
     
 }
 .createOk {
     margin-left: 80%;
-    margin-right: 25px;
+    margin-right: 15px;
 }
 
 .createButtons:hover {
@@ -86,8 +86,8 @@ color: rgb(252, 240, 240);
     height: 70%;
     width: 80%;
     background-color: whitesmoke;
-    margin-left: 200px;
- 
+    margin-left: 100px;
+ margin-top: 40px;
     border-radius: 20px
 }
 
