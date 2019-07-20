@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../Tasks.css';
-import { Icon, Input } from 'antd';
+import { Icon, Input, DatePicker} from 'antd';
 import Axios from 'axios';
 import {connect} from 'react-redux';
 
@@ -18,7 +18,8 @@ class CreateNew extends Component {
            //nextRemindDate: '',
            //reminderFrequencyId: '',
            userId: '',
-           tasksSubject: ''
+           tasksSubject: '',
+           size: 'default'
         }
     }
     makeTask = e => {
@@ -54,9 +55,22 @@ class CreateNew extends Component {
            return "visible"
        } return "hidden"
    } 
-
+   handleSizeChange = e => {
+    this.setState({ size: e.target.value });
+  };
 
     render() {
+         const {size} = this.state;
+        const dateExpire = {
+            // borderRadius: '20px !important'
+            marginTop: '15px',
+           // marginLeft: '90px',
+            width: '25%',
+            zIndex: '7',
+           
+            
+        }
+        const InputGroup = Input.Group;
         const { TextArea } = Input
         const { tasksBody, tasksSubject, userId } = this.state
         return(
@@ -104,6 +118,10 @@ class CreateNew extends Component {
                value={userId}
                onChange={e => this.setState({userId: e.target.value})}
                />
+             
+                <InputGroup compact>
+                <DatePicker className="datePickerStyle" placeholder="Expires" size={size}/>
+                </InputGroup>
                <TextArea
                rows={8}
                value={tasksBody}
