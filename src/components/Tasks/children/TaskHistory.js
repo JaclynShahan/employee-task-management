@@ -11,8 +11,10 @@ class TaskHistory extends Component {
 
     render() {
         return(
-            <div>
-                <input />
+            <div className="searchTasksForm">
+                <input 
+                className="searchTasksInput"
+                />
                 <button>Search Tasks</button>
 
             </div>

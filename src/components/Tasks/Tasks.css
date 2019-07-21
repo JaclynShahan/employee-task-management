@@ -14,13 +14,10 @@
 .taskbarNav a:hover {
     background-color: rgb(64, 82, 155);
     color: rgb(252, 240, 240);
-   
+   width: 100%;
 }
 
-.taskbarNav:active {
-    background-color: rgb(64, 82, 155);
-    color: rgb(252, 240, 240);
-}
+
 
 .createIcon {
 margin-top: 300%;
@@ -43,7 +40,7 @@ color: rgb(252, 240, 240);
 
 .createModal {
     width: 70%;
-    height: 45%;
+    height: 55%;
     position: fixed;
     background-color: rgb(151, 151, 170);
     margin-left: 20%;
@@ -51,7 +48,7 @@ color: rgb(252, 240, 240);
 }
 
 .createInputs {
-    border-radius: 15px;
+   
     height: 30px;
     width: 35%;
    margin-top: 30px;
@@ -68,7 +65,7 @@ color: rgb(252, 240, 240);
 }
 
 .createButtons {
-    border-radius: 20px;
+
    margin-top: 30px;
  
     
@@ -88,7 +85,7 @@ color: rgb(252, 240, 240);
     background-color: whitesmoke;
     margin-left: 100px;
  margin-top: 40px;
-    border-radius: 20px
+   
 }
 
 .spanTitle {
@@ -109,5 +106,19 @@ color: rgb(252, 240, 240);
     width: 25%;
     z-index: 7;
     margin-top: 15px;
-    margin-left: 30px;
+    margin-left: 100px;
+}
+
+.searchTasksForm {
+    position: fixed;
+    margin-left: 30%;
+    height: 90%;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.searchTasksInput {
+    width: 40%;
+    height: 40px;
+    margin-right: 20px;
 }

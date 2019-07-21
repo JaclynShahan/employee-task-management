@@ -19,7 +19,10 @@ class CreateNew extends Component {
            //reminderFrequencyId: '',
            userId: '',
            tasksSubject: '',
-           size: 'default'
+           size: 'default',
+           startValue: null,
+           endValue: null,
+           endOpen: false,
         }
     }
     makeTask = e => {
@@ -59,8 +62,48 @@ class CreateNew extends Component {
     this.setState({ size: e.target.value });
   };
 
+  disabledStartDate = startValue => {
+    const { endValue } = this.state;
+    if (!startValue || !endValue) {
+      return false;
+    }
+    return startValue.valueOf() > endValue.valueOf();
+  };
+
+  disabledEndDate = endValue => {
+    const { startValue } = this.state;
+    if (!endValue || !startValue) {
+      return false;
+    }
+    return endValue.valueOf() <= startValue.valueOf();
+  };
+
+  onChange = (field, value) => {
+    this.setState({
+      [field]: value,
+    });
+  };
+
+  onStartChange = value => {
+    this.onChange('startValue', value);
+  };
+
+  onEndChange = value => {
+    this.onChange('endValue', value);
+  };
+
+  handleStartOpenChange = open => {
+    if (!open) {
+      this.setState({ endOpen: true });
+    }
+  };
+
+  handleEndOpenChange = open => {
+    this.setState({ endOpen: open });
+  };
+
     render() {
-         const {size} = this.state;
+         const {size, startValue, endValue, endOpen} = this.state;
         const dateExpire = {
             // borderRadius: '20px !important'
             marginTop: '15px',
@@ -119,9 +162,27 @@ class CreateNew extends Component {
                onChange={e => this.setState({userId: e.target.value})}
                />
              
-                <InputGroup compact>
-                <DatePicker className="datePickerStyle" placeholder="Expires" size={size}/>
-                </InputGroup>
+             <DatePicker
+             className="datePickerStyle"
+          disabledDate={this.disabledStartDate}
+          showTime
+          format="YYYY-MM-DD HH:mm:ss"
+          value={startValue}
+          placeholder="Start"
+          onChange={this.onStartChange}
+          onOpenChange={this.handleStartOpenChange}
+        />
+        <DatePicker
+       className="datePickerStyle"
+          disabledDate={this.disabledEndDate}
+          showTime
+          format="YYYY-MM-DD HH:mm:ss"
+          value={endValue}
+          placeholder="End"
+          onChange={this.onEndChange}
+          open={endOpen}
+          onOpenChange={this.handleEndOpenChange}
+        />
                <TextArea
                rows={8}
                value={tasksBody}
