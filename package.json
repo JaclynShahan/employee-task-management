@@ -9,7 +9,7 @@
     "chart.js": "^2.8.0",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "express-stormpath": "^4.0.0",
     "massive": "^5.10.0",
     "node": "^12.3.1",
